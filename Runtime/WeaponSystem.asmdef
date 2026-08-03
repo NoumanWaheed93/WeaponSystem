@@ -1,9 +1,7 @@
 {
     "name": "WeaponSystem",
     "rootNamespace": "WeaponSystem",
-    "references": [
-        "GUID:7072f92444139694cbca3890ce0d9aed"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
