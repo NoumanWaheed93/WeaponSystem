@@ -1,6 +1,6 @@
 {
   "name": "com.artisangames.weaponsystem",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "Weapon System",
   "description": "Ammo- and fire-rate-driven weapons for Unity. A plain C# Weapon base class handles ammo, reloading and shot intervals against an injectable clock, with ready-made raycast, projectile and guided-projectile weapons on top. MonoBehaviour projectiles and a time provider are included, but the weapon logic itself has no scene dependency, so it is fully unit testable.",
   "unity": "6000.0",
