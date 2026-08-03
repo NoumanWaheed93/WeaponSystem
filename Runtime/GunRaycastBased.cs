@@ -21,14 +21,14 @@ namespace WeaponSystem
                 RaycastHit hitInfo;
                 if (Physics.Raycast(Barrel.position, Barrel.forward, out hitInfo, range))
                 {
-                    ApplyDamage(damageAmount);
+                    ApplyDamage(hitInfo, damageAmount);
                 }
                 return true;
             }
             return false;
         }
 
-        public abstract void ApplyDamage(RaycastHit hitInfo);
+        public abstract void ApplyDamage(RaycastHit hitInfo, float damageAmount);
 
     }
 }
