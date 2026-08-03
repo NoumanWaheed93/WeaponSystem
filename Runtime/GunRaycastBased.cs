@@ -1,9 +1,8 @@
 using UnityEngine;
-using HealthSystem;
 
 namespace WeaponSystem
 {
-    public class GunRaycastBased : Weapon
+    public abstract class GunRaycastBased : Weapon
     {
         private float range;
         private float damageAmount;
@@ -22,17 +21,14 @@ namespace WeaponSystem
                 RaycastHit hitInfo;
                 if (Physics.Raycast(Barrel.position, Barrel.forward, out hitInfo, range))
                 {
-                    IDamageable damageable;
-                    if (hitInfo.collider.TryGetComponent<IDamageable>(out damageable))
-                    {
-                        Debug.Log($"Raycast hit {hitInfo.collider.name} at distance {hitInfo.distance}, applying {damageAmount} damage.");
-                        damageable.Damage(damageAmount);
-                    }
+                    ApplyDamage(damageAmount);
                 }
                 return true;
             }
             return false;
         }
+
+        public abstract void ApplyDamage(RaycastHit hitInfo);
 
     }
 }
